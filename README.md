@@ -96,9 +96,8 @@ Population: 99,340 encounters (deaths and hospice discharges excluded, since the
 | MEDIUM (40–59) | 11,657 | 19.8% |
 | HIGH (60+) | 1,729 | 28.6% — about 3x the low tier |
 
-![Daily high-risk call feed](docs/call_feed.png)
+<img width="1575" height="840" alt="Screenshot 2026-11-04 111016" src="https://github.com/user-attachments/assets/ffafccee-7e94-4958-9f96-18e34591afdf" />
 
-*Illustrative dashboard view of the nightly high-risk list (sample data).*
 
 ### Recommendations
 

@@ -4,9 +4,7 @@ End-to-end SQL project that turns 101,766 real hospital encounters from 130 US h
 
 SQL · PL/pgSQL · Oracle PL/SQL port (untested) · 21 automated tests
 
-![Dashboard](docs/dashboard.png)
-
-<img width="1620" height="842" alt="Screenshot 2026-11-04 110949" src="https://github.com/user-attachments/assets/68d81e65-28b5-4c18-89e2-7779cb1a1eaa" />
+   ![Dashboard showing the 30-day readmission rate, risk tiers and key patient segments](docs/images/dashboard-overview.png)
 
 
 Live dashboard: https://care-return-radar.lovable.app
@@ -96,7 +94,7 @@ Population: 99,340 encounters (deaths and hospice discharges excluded, since the
 | MEDIUM (40–59) | 11,657 | 19.8% |
 | HIGH (60+) | 1,729 | 28.6% — about 3x the low tier |
 
-<img width="1575" height="840" alt="Screenshot 2026-11-04 111016" src="https://github.com/user-attachments/assets/ffafccee-7e94-4958-9f96-18e34591afdf" />
+![Bar chart of actual 30-day readmission rate for the LOW, MEDIUM and HIGH risk tiers](docs/images/risk-tier-validation.png)
 
 **Two validations, two standards:** the SQL risk tiers above were checked on the same data used to design the score (no holdout), so they show the score separates risk, not how it would perform on new patients. The Python analysis below is the stronger test: it was evaluated on a held-out 20% of patients.
 
@@ -104,7 +102,7 @@ Python analysis (notebooks/readmission_analysis.ipynb)
 
 Uses pandas and scikit-learn on the same dataset to test the findings on patients the model has not seen (80/20 split by patient, so no patient appears in both sets).
 
-<img width="902" height="200" alt="image" src="https://github.com/user-attachments/assets/95e2c051-416c-44a9-93a0-13080558263b" />
+   ![Chart of actual readmission rate by predicted-risk decile on held-out test patients](docs/images/python-holdout-results.png)
 
 
 - Actual readmission rises from 4.4% in the lowest-risk decile to 26.4% in the highest (test average 11.2%).

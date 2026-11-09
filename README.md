@@ -21,7 +21,7 @@ Live dashboard: https://care-return-radar.lovable.app
 
 Under the US Hospital Readmissions Reduction Program (HRRP), Medicare cuts payments to hospitals whose patients come back too often within 30 days of discharge. Diabetic patients are a high-risk group: they are readmitted more often and cost more per stay.
 
-A hospital quality team asked for:
+Scenario (a framed use case for this portfolio project, not a real client engagement): a hospital quality team needs:
 
 - A clean, queryable database built from raw encounter exports.
 - Answers to key questions: which patients, conditions, and discharge decisions drive 30-day readmissions?

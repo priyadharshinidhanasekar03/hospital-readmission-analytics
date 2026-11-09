@@ -105,9 +105,9 @@ Uses pandas and scikit-learn on the same dataset to test the findings on patient
 <img width="902" height="200" alt="image" src="https://github.com/user-attachments/assets/95e2c051-416c-44a9-93a0-13080558263b" />
 
 
--Actual readmission rises from 4.4% in the lowest-risk decile to 26.4% in the highest (test average 11.2%).
--Top factors: prior inpatient visits and discharge destination, far ahead of everything else.
--Four patient segments; the “Frequent returners” group (9.5% of encounters) has the highest rate at 18.8%.
+- Actual readmission rises from 4.4% in the lowest-risk decile to 26.4% in the highest (test average 11.2%).
+- Top factors: prior inpatient visits and discharge destination, far ahead of everything else.
+- Four patient segments; the "Frequent returners" group (9.5% of encounters) has the highest rate at 18.8%.
 
 
 ### Recommendations

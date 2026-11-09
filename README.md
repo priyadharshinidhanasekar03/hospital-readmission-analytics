@@ -2,7 +2,7 @@
 
 End-to-end SQL project that turns 101,766 real hospital encounters from 130 US hospitals into a normalized database, a reporting layer, and a nightly risk-scoring job that finds the patients most likely to return within 30 days.
 
-`SQL` · `PL/pgSQL` · `Oracle PL/SQL` · `21 automated tests`
+SQL · PL/pgSQL · Oracle PL/SQL port (untested) · 21 automated tests
 
 ![Dashboard](docs/dashboard.png)
 
@@ -71,7 +71,7 @@ See `docs/er_diagram.md` for the full entity-relationship diagram.
 | `sql/05_plpgsql.sql` | Risk-score function, dynamic SQL report with injection whitelist, stored procedure with error handling + run log, audit trigger |
 | `sql/06_analysis.sql` | 13 business questions — CTEs, window functions (RANK, ROW_NUMBER, running SUM), FILTER, Pareto analysis, gaps-and-islands |
 | `tests/run_tests.sql` | 21 tests: load reconciliation, integrity, cleaning rules, function unit tests, trigger + procedure tests |
-| `oracle/pkg_readmission.sql` | The same logic as an Oracle PL/SQL package (autonomous-transaction logging, RAISE_APPLICATION_ERROR, row trigger) |
+| `oracle/pkg_readmission.sql` | The same logic written as an Oracle PL/SQL package (autonomous-transaction logging, `RAISE_APPLICATION_ERROR`, row trigger). **Not tested on an Oracle instance**; only the PostgreSQL version was run and tested. |
 
 ## 5. Key findings
 
@@ -163,6 +163,7 @@ SELECT * FROM rpt_high_risk_patient WHERE risk_tier = 'HIGH' ORDER BY max_risk_s
 - The risk tiers were validated on the same data used to design the score, with no holdout set.
 - Findings are descriptive and not adjusted for other factors, so they show association, not cause.
 - Patient identifiers in the data are already anonymized.
+- The Oracle PL/SQL package was written as a port of the PostgreSQL logic but has not been run on an Oracle database.
 
 ## 9. License
 

@@ -98,6 +98,8 @@ Population: 99,340 encounters (deaths and hospice discharges excluded, since the
 
 <img width="1575" height="840" alt="Screenshot 2026-11-04 111016" src="https://github.com/user-attachments/assets/ffafccee-7e94-4958-9f96-18e34591afdf" />
 
+**Two validations, two standards:** the SQL risk tiers above were checked on the same data used to design the score (no holdout), so they show the score separates risk, not how it would perform on new patients. The Python analysis below is the stronger test: it was evaluated on a held-out 20% of patients.
+
 Python analysis (notebooks/readmission_analysis.ipynb)
 
 Uses pandas and scikit-learn on the same dataset to test the findings on patients the model has not seen (80/20 split by patient, so no patient appears in both sets).

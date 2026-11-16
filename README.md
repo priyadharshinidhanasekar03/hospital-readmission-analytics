@@ -165,6 +165,12 @@ SELECT * FROM rpt_high_risk_patient WHERE risk_tier = 'HIGH' ORDER BY max_risk_s
 
 ## 9. Power BI Dashboard
 
+Page 1: Hospital Readmission Overview
+<img width="961" height="542" alt="dashboard power BI" src="https://github.com/user-attachments/assets/ac2bfa81-0c1c-4809-83fd-775585a08d37" />
+
+Page 2: Detailed Readmission Analysis
+<img width="946" height="540" alt="detailed readmission analysis" src="https://github.com/user-attachments/assets/569857a2-1424-453c-bf65-402c6f480e56" />
+
 An additional interactive analytics dashboard built using Microsoft Power BI to explore hospital readmission patterns and identify factors associated with readmission within 30 days.
 
 ### Tools Used

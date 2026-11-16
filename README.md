@@ -165,6 +165,8 @@ SELECT * FROM rpt_high_risk_patient WHERE risk_tier = 'HIGH' ORDER BY max_risk_s
 
 ## 9. Power BI Dashboard
 
+[Download the Power BI Dashboard (.pbix)](Hospital_Readmission_Analytics.pbix.pbix)
+
 Page 1: Hospital Readmission Overview
 <img width="961" height="542" alt="dashboard power BI" src="https://github.com/user-attachments/assets/ac2bfa81-0c1c-4809-83fd-775585a08d37" />
 

@@ -163,6 +163,39 @@ SELECT * FROM rpt_high_risk_patient WHERE risk_tier = 'HIGH' ORDER BY max_risk_s
 - Patient identifiers in the data are already anonymized.
 - The Oracle PL/SQL package was written as a port of the PostgreSQL logic but has not been run on an Oracle database.
 
-## 9. License
+## 9. Power BI Dashboard
 
-Code is released under the MIT License (see `LICENSE`). The dataset is CC BY 4.0, from the UCI Machine Learning Repository.
+An additional interactive analytics dashboard built using Microsoft Power BI to explore hospital readmission patterns and identify factors associated with readmission within 30 days.
+
+### Tools Used
+- Microsoft Power BI
+- Power Query – Data cleaning and transformation
+- DAX – KPI calculations and readmission rate measures
+- CSV – Source dataset
+
+### Dashboard Pages
+
+**Page 1: Hospital Readmission Overview**
+- Total hospital encounters
+- Readmissions within 30 days
+- Readmission rate
+- Readmission distribution
+- Hospital encounters by age group and gender
+- Encounters by length of stay and admission type
+- Encounters by medical specialty
+- Encounters by number of diagnoses and medication count
+
+**Page 2: Detailed Readmission Analysis**
+- Key Influencers visual
+- Analysis of factors associated with readmission rate
+- Exploration of previous inpatient visits and length of hospital stay
+
+### Power BI Findings
+- Total encounters analyzed: 101,766
+- Readmissions within 30 days: 11,357
+- Readmission rate: 11.16%
+- The [20-30) age group showed the highest readmission rate in the age-group analysis.
+- The [70-80) age group had the highest encounter volume.
+- Previous inpatient visits and length of hospital stay appeared among the factors associated with readmission rate in the Key Influencers analysis.
+
+**Note:** The Power BI dashboard uses all 101,766 encounters, whereas the SQL analysis uses an eligible population after excluding deaths and hospice discharges. Therefore, their readmission rates use different denominators and should not be directly compared. The findings represent statistical associations, not causal relationships.
